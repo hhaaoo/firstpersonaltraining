@@ -2,6 +2,15 @@
 
 <b>To be constructed...</b>
 
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
+
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd1X06ietA1x8Ht2uBdWCBwCWOpiBwbLaG6gJa6vX1MlNSZVA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
 <form action="/action_page.php">
   Personal Info:<br>
@@ -13,15 +22,8 @@
   <input type="text" id="entry.428597181" name="entry.428597181" placeholder="Enter you message..."
   <br><br>
   <input type="submit" value="Submit">
-</form> 
+</form>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
-</script>
+
